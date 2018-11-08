@@ -13,27 +13,39 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 .hr {
   width: 90vw;
 }
 
+.margin {
+  margin: 10px;
+}
+
+.a-block {
+  display: inline-block;
+  width: 40vw;
+  height: 40vh;
+  padding: 10px;
+  margin: 10px;
+  font-size: 14px;
+}
+
 #editor {
-  display: block;
-  width: 80vw;
-  height: 20vh;
-  padding: 5px;
+  border-style: inset;
 }
 
 #preview {
-  display: block;
-  width: 80vw;
-  height: 20vh;
-  padding: 5px;
-  background-color: snow;
+  background-color: gainsboro;
+  border-style: groove;
+  overflow: auto;
   color: black;
   text-align: left;
+}
+
+@media screen and (max-width: 700px) {
+  .a-block {
+    dislay: block;
+    width: 80vw;
+    height: 25vh;
+  }
 }

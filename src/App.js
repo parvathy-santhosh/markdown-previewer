@@ -20,11 +20,13 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <h1> MarkDown Previewer </h1>
-        <hr className="hr" />
-        <textarea id="editor" onChange={this.handleChange} />
-        <MarkDown text={this.state.text}/>
-        <hr className="hr" />
-        <small> parvathy-santhosh 2018 </small>
+        <hr className="hr margin" />
+        <div>
+          <textarea id="editor" className="a-block" onChange={this.handleChange} />
+          <MarkDown text={this.state.text}/>
+        </div>
+        <hr className="hr margin" />
+        <small className="margin"> parvathy-santhosh 2018 </small>
         </header>
       </div>
     );
