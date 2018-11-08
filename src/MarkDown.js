@@ -15,6 +15,10 @@ myMarked.setOptions({
 });
 
 class MarkDown extends Component {
+  componentDidMount(){
+    const e = document.getElementById('preview');
+    e.innerHTML = myMarked(this.props.text);
+  }
   componentDidUpdate(){
     const e = document.getElementById('preview');
     e.innerHTML = myMarked(this.props.text);

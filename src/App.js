@@ -24,7 +24,7 @@ class App extends Component {
         <h1> MarkDown Previewer </h1>
         <hr className="hr margin" />
         <div>
-          <textarea id="editor" className="a-block" onChange={this.handleChange} placeholder={PLACEHOLDER}/>
+          <textarea id="editor" className="a-block" onChange={this.handleChange}>{PLACEHOLDER}</textarea>
           <MarkDown text={this.state.text}/>
         </div>
         <hr className="hr margin" />
