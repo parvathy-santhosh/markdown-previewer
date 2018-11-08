@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MarkDown from './MarkDown.js';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text : ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      text : event.target.value
+    })
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <h1> MarkDown Previewer </h1>
+        <hr className="hr" />
+        <textarea id="editor" onChange={this.handleChange} />
+        <MarkDown text={this.state.text}/>
+        <hr className="hr" />
+        <small> parvathy-santhosh 2018 </small>
         </header>
       </div>
     );
