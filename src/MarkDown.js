@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'marked';
 import './App.css';
 
 var myMarked = require('marked');
